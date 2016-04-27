@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render partial: 'common/header' %>
 
-<%= yield %>
+    <%= yield %>
 
+  <footer class='row text-center'>
+    <p>Noride 2016 Alrights Reserved.</p>
+  </footer>
 </body>
 </html>

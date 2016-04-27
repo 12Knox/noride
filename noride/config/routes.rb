@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :developers, controllers: {
+  sessions:      'developers/sessions',
+  passwords:     'developers/passwords',
+  registrations: 'developers/registrations'
+}
+devise_for :users, controllers: {
+  sessions:      'users/sessions',
+  passwords:     'users/passwords',
+  registrations: 'users/registrations'
+}
+  root to: "top#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

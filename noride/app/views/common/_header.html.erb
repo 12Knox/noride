@@ -1,0 +1,21 @@
+<header id="header">
+<p class="header_phrase">The way you ride is the way you live.</p>
+<h1>Noride</h1>
+<% if user_signed_in? %>
+  <p>you are in the service.</p>
+  <nav>
+    <ul>
+      <li><a href="#" title="About">About</a></li>
+      <li><a href="#" title="News">News</a></li>
+      <li><a href="#" title="Rides">Rides</a></li>
+      <li><a href="#" title="Develop">Develop</a></li>
+      <li><a href="#" title="Buy">Buy</a></li>
+      <li><a href="#" title="Contact">Contact</a></li>
+    </ul>
+  </nav>
+<% else %>
+  <div class="">
+    <p>Search for the future rides.</p>
+  </div>
+<% end %>
+</header>
