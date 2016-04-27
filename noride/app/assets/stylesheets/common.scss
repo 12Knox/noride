@@ -127,12 +127,18 @@ div.right_contents {
 
 div.each_rides {
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 25px;
+  margin-bottom: 60px;
   width: 350px;
   height: auto;
   min-height: 450px;
   background: #000000;
+}
+
+.each_rides_title {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding-left: 20px;
 }
 
 div.not_login_view {
@@ -140,13 +146,26 @@ div.not_login_view {
   min-height: 1200px;
 }
 
-footer#footer small {
+p.not_login_view_title {
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin-top: -50px;
+}
+
+footer#footer {
   width: 100%;
   min-width: 1024px;
+  position: fixed;
+  bottom: 0;
+  background: #eeeeee;
+}
+
+footer#footer small {
+  height: 50px;
+  line-height: 50px;
   margin: 0 auto;
   display: block;
   text-align: center;
-  margin-top: 25px;
 }
 
 @media (min-width: 768px) {
