@@ -10,7 +10,6 @@ $gray: #888;
 
 //setting
 @charset "UTF-8";
-/*@import url(//fonts.googleapis.com/css?family=Montserrat);*/
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 * {
   font-family: 'Noto Sans Japanese', serif !important;
@@ -40,6 +39,18 @@ h4,h5,h6 {
   font-size: 0.8em;
 }
 
+a {
+  text-decoration: none;
+  color: #333333;
+  &:hover {
+    border-bottom: solid 2px #333333;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
 header#header {
   background: #FDBD00;
   width: 100%;
@@ -53,7 +64,9 @@ header p.header_phrase {
   font-weight: lighter;
   letter-spacing: 5px;
   width: 100%;
+  margin-top: -10px;
   padding-top: 50px;
+  padding-left: 55px;
 }
 
 header h1 {
@@ -62,7 +75,24 @@ header h1 {
   font-weight: lighter;
   letter-spacing: 25px;
   width: 100%;
-  padding-top: -150px;
+  margin-top: -20px;
+  padding-left: 50px;
+}
+
+ul#nav_self {
+  display: block;
+  float: right;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 10;
+  margin-top: -150px;
+}
+
+ul li.each_nav {
+  float: left;
+  padding-right: 20px;
+  font-size: 1.2em;
 }
 
 @media (min-width: 768px) {
