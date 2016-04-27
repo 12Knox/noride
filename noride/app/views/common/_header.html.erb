@@ -1,15 +1,16 @@
-<% if user_signed_in? %>
 <header id="header">
   <nav class="main_navigation">
   <p class="header_phrase">The way you ride is the way you live.</p>
-  <h1>Noride</h1>
+  <h1><%= link_to "Noride", root_path %></h1>
+<% if user_signed_in? %>
     <ul id="nav_self">
-      <li class="each_nav"><a href="#" title="About">About</a></li>
-      <li class="each_nav"><a href="#" title="News">News</a></li>
-      <li class="each_nav"><a href="#" title="Rides">Rides</a></li>
-      <li class="each_nav"><a href="#" title="Develop">Develop</a></li>
-      <li class="each_nav"><a href="#" title="Buy">Buy</a></li>
-      <li class="each_nav"><a href="#" title="Contact">Contact</a></li>
+      <li class="each_nav"><%= link_to "About", root_path %></li>
+      <li class="each_nav"><%= link_to "News", root_path %></li>
+      <li class="each_nav"><%= link_to "Rides", root_path %></li>
+      <li class="each_nav"><%= link_to "Develop", root_path %></li>
+      <li class="each_nav"><%= link_to "Buy", root_path %></li>
+      <li class="each_nav"><%= link_to "Contact", root_path %></li>
+      <% else %>
     </ul>
   </nav>
 </header>

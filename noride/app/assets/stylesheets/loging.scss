@@ -1,0 +1,28 @@
+//setting
+@charset "UTF-8";
+
+div.login_wrap {
+  width: 100%;
+  max-width: 1024px;
+  text-align: center;
+}
+
+div.sign_up_logo {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+div.sign_up_logo p {
+  font-size: 1.5em;
+}
+
+div.pw_box {
+  width: 100%;
+  min-width: 500px;
+}
+
+div.email_box {
+  width: 100%;
+  min-width: 500px;
+}
