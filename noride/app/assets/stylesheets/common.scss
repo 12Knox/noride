@@ -135,8 +135,15 @@ div.each_rides {
   background: #000000;
 }
 
+div.not_login_view {
+  height: auto;
+  min-height: 1200px;
+}
+
 footer#footer small {
   width: 100%;
+  min-width: 1024px;
+  margin: 0 auto;
   display: block;
   text-align: center;
   margin-top: 25px;
