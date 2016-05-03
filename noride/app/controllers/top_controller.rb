@@ -11,4 +11,14 @@ class TopController < ApplicationController
   def new
   end
 
+  def show_by_userid
+    @user = User.find_by!(userid: params[:userid])
+    render :template => "users/show"
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+
 end
