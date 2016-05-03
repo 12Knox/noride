@@ -25,13 +25,5 @@ module Noride
     config.active_record.raise_in_transactional_callbacks = true
   end
 
-  module Test
-  class Application < Rails::Application
-    Amazon::Ecs.options = {
-      :associate_tag =>     'eisuke1212-22',
-      :AWS_access_key_id => 'AKIAIY3VN4OO2ZBT756Q',
-      :AWS_secret_key =>   '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'
-    }
-  end
-end
+ end
 end
