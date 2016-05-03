@@ -49,3 +49,8 @@ end
   gem 'devise'
   gem 'paperclip'
   gem 'kaminari'
+  gem 'amazon-ecs'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end

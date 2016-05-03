@@ -1,0 +1,49 @@
+<div class="contents_wrap clearfix">
+  <div class="left_contents">
+    <nav>
+      <ul>
+        <% if user_signed_in? %>
+        <li class="menu_lists"><%= link_to "Logout from User", destroy_user_session_path, method: :delete %></li>
+        <% elsif developer_signed_in? %>
+        <li class="menu_lists"><%= link_to "Logout from Developer", destroy_developer_session_path, method: :delete %></li>
+        <% else %>
+        <li class="menu_lists"><%= link_to "User Signup", "/users/sign_up" %></li>
+        <li class="menu_lists"><%= link_to "Developer Signup", "/developers/sign_up" %></li>
+        <li class="menu_lists"><%= link_to "User Login", "/users/sign_in" %></li>
+        <li class="menu_lists"><%= link_to "Developer Login", "/developers/sign_in" %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="right_contents">
+  <% if user_signed_in? %>
+  <div class="each_rides_users">
+    <p class="each_rides_title_users">
+      <% @product.each do |product| %>
+    <p><%= product.image %></p>
+    <p><%= product.ride_name %></p>
+    <p><%= product.nickname %></p>
+    <p><%= product.price %></p>
+    <p><%= product.concept %></p>
+    </p>
+    <% end %>
+  </div>
+  <% elsif developer_signed_in? %>
+  <div class="each_rides_devs">
+    <p class="each_rides_title_devs">テストです。</p>
+  </div>
+  <% else %>
+  <div class="not_login_view">
+    <h3 class="not_login_view_title">This is Noride Website.</h3>
+    <section class="not_login_view_contents">
+      <p><%= image_tag 'riding_photo.jpg' %></p>
+      <p>世界は変わっています。日々暮らしのあり方、食べ物に対する概念。</p>
+      <p>次は乗り物のあり方が変わるべきです。日常の中で移動時間というものは非常に「無駄」であると考えられます。</p>
+      <p>その無駄な時間をNorideは有意義な時間へと変貌させるべく始動した新たな暮らしのスタイルを求めるチームです。</p>
+    </section>
+    <h3 class="not_login_view_title">Why I built this.</h3>
+    <p></p>
+  </div>
+  <% end %>
+</div>
+</div>

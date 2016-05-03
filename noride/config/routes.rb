@@ -9,7 +9,18 @@ devise_for :users, controllers: {
   passwords:     'users/passwords',
   registrations: 'users/registrations'
 }
-  root to: "top#index"
+  ################ 後々必要 ########################
+  # resources :products, only: :show do
+  #   resources :contents, only: [:new, :create]
+  #   collection do
+  #     get 'search'
+  #   end
+  # end
+  ################################################
+
+  root to: 'top#index'
+  get '/timeline' => 'top#timeline'
+  get '/new' => 'top#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

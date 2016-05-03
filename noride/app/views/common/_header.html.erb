@@ -2,15 +2,25 @@
   <nav class="main_navigation">
   <p class="header_phrase">The way you ride is the way you live.</p>
   <h1><%= link_to "Noride", root_path %></h1>
-<% if user_signed_in? %>
+<% if user_signed_in?%>
+  <h3>A-SKのページ</h3>
+    <ul id="nav_self">
+      <li class="each_nav"><%= link_to "About", root_path %></li>
+      <li class="each_nav"><%= link_to "News", root_path %></li>
+      <li class="each_nav"><%= link_to "Rides", root_path %></li>
+      <li class="each_nav"><%= link_to "Buy", root_path %></li>
+      <li class="each_nav"><%= link_to "Contact", root_path %></li>
+    </ul>
+<% elsif developer_signed_in? %>
+  <h3>ドクターA-SKのページ</h3>
     <ul id="nav_self">
       <li class="each_nav"><%= link_to "About", root_path %></li>
       <li class="each_nav"><%= link_to "News", root_path %></li>
       <li class="each_nav"><%= link_to "Rides", root_path %></li>
       <li class="each_nav"><%= link_to "Develop", root_path %></li>
-      <li class="each_nav"><%= link_to "Buy", root_path %></li>
+      <li class="each_nav"><%= link_to "Sell", root_path %></li>
       <li class="each_nav"><%= link_to "Contact", root_path %></li>
     </ul>
+    <% end %>
   </nav>
 </header>
-<% end %>

@@ -1,8 +1,8 @@
 <div class="contents_wrap">
   <div class="login_wrap">
-    <%= render partial: 'common/login_logo' %>
+    <%= render partial: 'common/login_logo_user' %>
     <div class='log-in-inner'>
-      <h2>Login</h2>
+      <h2>ユーザーログイン</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <% if alert %>

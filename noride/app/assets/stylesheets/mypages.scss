@@ -1,0 +1,42 @@
+
+/*Common Styling*/
+
+div.right_contents {
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+
+/*User CSS*/
+
+div.each_rides_users {
+  float: left;
+  margin: 25px;
+  margin-bottom: 60px;
+  width: 350px;
+  height: 450px;
+  background: #eeeeee;
+}
+
+.each_rides_title_users {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding-left: 20px;
+}
+
+/*Developer CSS*/
+
+div.each_rides_devs {
+  float: left;
+  margin: 25px;
+  margin-bottom: 60px;
+  width: 350px;
+  height: 450px;
+  background: #000000;
+}
+
+.each_rides_title_devs {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding-left: 20px;
+}

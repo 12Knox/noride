@@ -1,19 +1,18 @@
-<div class='regist_back'>
+<div class="contents_wrap">
   <div class='log-up'>
-    <%= render partial: 'common/login_logo' %>
-
-    <div class='log-in-inner'>
-      <h2>会員登録</h2>
+    <%= render partial: 'common/signup_logo_user' %>
+    <div class="login_wrap">
+      <h2>ユーザー会員登録</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
-        <div class='form-group'>
+        <div class='email_box'>
           <%= f.label :メールアドレス %><br />
           <%= f.email_field :email, autofocus: true, class: 'form-control' %>
         </div>
 
-        <div class='form-group'>
+        <div class='pw_box'>
           <%= f.label :パスワード %>
           <% if @validatable %>
             <em>(<%= @minimum_password_length %> 文字以上)</em>
@@ -21,7 +20,7 @@
           <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
         </div>
 
-        <div class='form-group'>
+        <div class='pw_box'>
           <%= f.label :パスワード（確認） %><br />
           <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control' %>
         </div>

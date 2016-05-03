@@ -110,6 +110,7 @@ ul li.each_nav {
   max-width: 1024px;
   margin: 0 auto;
   margin-top: 250px;
+  overflow: hidden;
 }
 
 div.left_contents {
@@ -117,6 +118,15 @@ div.left_contents {
   width: 20%;
   min-height: 800px;
   position: fixed;
+}
+
+ul li.menu_lists a {
+  font-size: 1.1em;
+  color: #333333;
+  margin-bottom: 10px;
+  &:hover{
+  color: #999999;
+  }
 }
 
 div.right_contents {
@@ -143,14 +153,23 @@ div.each_rides {
 }
 
 div.not_login_view {
+  width: 100%;
   height: auto;
   min-height: 1200px;
+  margin-top: 50px;
 }
 
-p.not_login_view_title {
+h3.not_login_view_title {
   font-size: 2.5em;
   font-weight: lighter;
   margin-top: -50px;
+}
+
+section.not_login_view_contents {
+  width: 100%;
+  max-width: 890px;
+  height: auto;
+  min-height: 600px;
 }
 
 footer#footer {

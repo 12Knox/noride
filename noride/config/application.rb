@@ -1,6 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'amazon/ecs' # 追記
+Bundler.require(:default, Rails.env)
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,4 +24,14 @@ module Noride
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end
+
+  module Test
+  class Application < Rails::Application
+    Amazon::Ecs.options = {
+      :associate_tag =>     'eisuke1212-22',
+      :AWS_access_key_id => 'AKIAIY3VN4OO2ZBT756Q',
+      :AWS_secret_key =>   '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'
+    }
+  end
+end
 end
